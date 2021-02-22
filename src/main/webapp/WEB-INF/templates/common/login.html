@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head th:include="common/header :: header-login"></head>
+<body>
+	<div class="container col-12">
+		<nav class="navbar navbar-expand-lg">
+			<div class="collapse navbar-collapse"></div>
+			<div class="form-row">
+				<!--<div class="col-md-6">-->
+				<!--<a lang="en" title="English" id="langEn">-->
+				<!--<img th:src="@{/img/en.png}" class="mx-auto d-block"/>-->
+				<!--</a>-->
+				<!--</div>-->
+				<!--<div class="col-md-6">-->
+				<!--<a lang="ja" title="Japanese" id="langJa">-->
+				<!--<img th:src="@{/img/ja.png}" class="mx-auto d-block"/>-->
+				<!--</a>-->
+				<!--</div>-->
+			</div>
+		</nav>
+	</div>
+	<div class="container col-6">
+		<div class="form-row">
+			<div class="form-group col-6 offset-3 text-center">
+				<h4 th:text="#{lbl.login}" class="font-weight-bold">Account
+					login</h4>
+			</div>
+			<div class="form-group col-md-4"></div>
+		</div>
+		<form th:action="@{/j_spring_security_login}" method="POST">
+			<div class="form-row">
+				<div class="form-group col-md-4"></div>
+				<div class="form-group col-md-4">
+					<label th:for="exampleInputEmail1"
+						th:text="#{lbl.general.username}">Username</label> <input
+						type="text" class="form-control" name="username" required />
+				</div>
+				<div class="form-group col-md-4"></div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-4"></div>
+				<div class="form-group col-md-4">
+					<label th:for="password" th:text="#{lbl.general.password}">Password</label>
+					<input type="password" class="form-control" name="password"
+						required />
+				</div>
+				<div class="form-group col-md-4"></div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-4"></div>
+				<div class="form-group col-md-4">
+					<input type="checkbox" th:name="remember-me" th:id="rememberMe"
+						name="remember-me" /> <label class="form-check-label"
+						th:for="rememberMe" th:text="#{lbl.login.remember_me}">
+						Remember me </label>
+				</div>
+				<div class="form-group col-md-4"></div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-4"></div>
+				<div class="form-group col-md-4">
+					<button type="submit" class="btn btn-primary"
+						th:text="#{btn.login}">Login</button>
+				</div>
+				<div class="form-group col-md-4"></div>
+			</div>
+			<input type="hidden" name="${_csrf.parameterName}"
+				value="${_csrf.token}" />
+		</form>
+
+		<div class="form-row">
+			<div class="form-group col-md-4"></div>
+			<div class="form-group col-md-4">
+				<label th:if="${message} != null" class="text-danger"
+					th:text="#{ ${message} }"></label>
+			</div>
+			<div class="form-group col-md-4"></div>
+		</div>
+	</div>
+	<div th:replace="common/footer :: footer"></div>
+</body>
+</html>

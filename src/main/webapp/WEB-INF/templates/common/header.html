@@ -1,0 +1,16 @@
+<head-primary xmlns:th="http://www.thymeleaf.org" th:fragment="header">
+    <meta charset="utf-8"/>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <title th:text="SpringMVC"></title>
+    <link rel="icon" type="image/jpg" th:href="@{/resources/img/fav/logo_favicon.jpg}">
+    <link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/resources/css/font_awesome.css}"/>
+</head-primary>
+
+<head-secondary xmlns:th="http://www.thymeleaf.org" th:fragment="header-login">
+    <meta charset="utf-8"/>
+    <title th:text="SpringMVC"></title> <!-- #{system.title} -->
+    <link rel="icon" type="image/jpg" th:href="@{/resources/img/fav/logo_favicon.jpg}">
+    <link rel="stylesheet" th:href="@{/resources/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/resources/css/account.list.css}"/>
+</head-secondary>

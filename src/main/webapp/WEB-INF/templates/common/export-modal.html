@@ -1,0 +1,36 @@
+<!-- The Modal -->
+<div class="modal" id="export-modal" th:fragment="export-modal" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title" th:text="#{lbl.csv.export}">Export account to CSV</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form th:action="@{/file/exportCsv}">
+                    <div class="row">
+                        <div class="col-4 text-muted text-right">
+                            <label for="model_source_export_select" th:text="#{lbl.media.type}">Media</label>
+                        </div>
+                        <div class="col-5">
+                            <select th:name="type" class="form-control" id="model_source_export_select" required>
+                                <option th:each="item : ${listMedia}" th:value="${item.mediaCode}"
+                                        th:text="${item.reportSourceName}">
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-outline-primary w-100">
+                                <span th:text="#{btn.export}">Export</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

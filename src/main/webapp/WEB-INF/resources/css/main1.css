@@ -1,0 +1,135 @@
+body {
+    background-color: #ececec;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        flex-direction: row;
+    }
+    .navbar-nav .nav-item {
+        padding-right: 10px;
+    }
+}
+
+.navbar-nav .dropdown-menu {
+    position: absolute!important;
+}
+
+.lbl-required{
+    color: red;
+    font-weight: normal;
+    width: 10px;
+}
+
+.input-label-with-require {
+    float: right;
+    margin-right: 10px;
+}
+
+.input-label-no-require {
+    float: right;
+    margin-right: 10px;
+}
+
+.table thead th{
+    text-align: center;
+    padding: .50rem !important;
+}
+
+thead {
+    background-color: #DBE6F0;
+}
+
+table {
+    font-size: smaller !important;
+}
+
+table td {
+    padding: .40rem !important;
+}
+
+.btn {
+    padding: .200rem .50rem !important;
+}
+
+table tbody tr:nth-child(odd),
+table tbody tr:nth-child(odd):hover {
+    background: aliceblue;
+}
+
+.modal {
+    text-align: center;
+    padding: 0!important;
+}
+
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+}
+
+.modal-dialog {
+    width: 500px;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    margin-bottom: 10%;
+}
+.input-file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.input-file + label {
+    color: #007BFF;
+    max-width: 100%;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.input-file + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    margin-right: 0.25em;
+}
+
+.error_input {
+    border-color: #E9322D!important;
+    box-shadow: 0 0 6px #F8B9B7!important;
+}
+
+.font-size-error {
+    font-size: 0.7em!important;
+}
+
+a.remove-tr {
+    font-size: large;
+}
+
+input::placeholder {
+    opacity: 0.2 !important;
+}
+
+.tag-editor {
+    border: 1px solid #ced4da!important;
+    border-radius: 0.25em!important;
+    min-height: calc(2.25rem + 2px)!important;
+}
+
+.red-tag {
+    color: #c65353!important;
+    background: #ffd7d7!important;
+}
